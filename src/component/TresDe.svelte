@@ -1,15 +1,21 @@
 <script>
     import { onMount } from "svelte";
     import * as THREE from "three";
+    
+    import { qualquerCor, loadGLTF } from "./util";
 
     export let addToList = () => {};
     export let aos = ""
+    export let model = ""
+
     let div;
     let grabbing = false;
     let sx = 0.1,
         sy = 0,
         oldX = 0,
         oldY = 0;
+
+
     function qualquerForma() {
         return new [
             THREE.IcosahedronGeometry,
@@ -29,19 +35,37 @@
         });
         const matWire = new THREE.MeshBasicMaterial({
             wireframe: true,
-            color: 0xFF00FF,
-            depthTest: true,
-            side: THREE.BackSide,
+            color: qualquerCor(),
         });
 
-        const mCube = new THREE.Mesh(gCube, matFlat);
-        const wCube = new THREE.Mesh(gCube, matWire);
 
-        // isso é um jeito tosco de fazer aquele efeito
-        // de wireframe opaco
-        wCube.scale.set(1.01,1.01,1.01)
-        scene.add(mCube);
-        scene.add(wCube);
+        // bora ver se dá certo isso...
+
+        if(model !== ""){
+            loadGLTF(model).then( gltf =>{
+                const mesh = gltf.scene
+                mesh.traverse( child =>{
+                    if(child.isMesh){
+                        child.material = matFlat
+                        const wire = new THREE.WireframeGeometry(child.geometry)
+                        const line = new THREE.LineSegments( wire )
+                        line.material.depthTest = true
+                        line.material.color.set(qualquerCor())
+                        line.scale.set(1.01,1.01,1.01)
+                        scene.add(line)
+                    }
+                })
+                scene.add(mesh)
+            })
+        }else{
+            const mCube = new THREE.Mesh(gCube, [matFlat, matWire]);
+            const wCube = new THREE.Mesh(gCube, matWire);
+            // isso é um jeito tosco de fazer aquele efeito
+            // de wireframe opaco
+            wCube.scale.set(1.01,1.01,1.01)
+            scene.add(mCube);
+            scene.add(wCube);
+        }
 
         const pivot = new THREE.Group()
         pivot.add(camera)
@@ -101,7 +125,7 @@
             );
         background-size: 2em 2em;
         border: 0.5px solid #00ffff;       
-        filter: drop-shadow(-8px 8px 0px #000);
+        box-shadow:-16px -16px 0px red;
         background-color: black;       
         cursor: crosshair;  
     }

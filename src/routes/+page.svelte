@@ -12,7 +12,6 @@
     import TresDe from "../component/TresDe.svelte";
 
     let canvas,
-        ctx,
         renderer
 
     let tresDeList = []
@@ -36,7 +35,6 @@
     }
 
     function render(){
-
         // tresDe tem:
         // div: HTMLDivElement
         // scene: THREE.Scene
@@ -82,8 +80,8 @@
                 tresDe.camera
             )
         }
-        // requestAnimationFrame(render)
-        setTimeout(render, 65)
+        requestAnimationFrame(render)
+        //setTimeout(render, 65)
     }
 
     // isso é um timer.
@@ -139,14 +137,14 @@
 {tresDeList.length}
 </h1>
 
-<Espacador h={100}/>
+<Espacador h={250}/>
 <Paragrafo>
     <h1>CAMPANHA PARA A PROIBIÇÃO DO USO DO REFRIGENTE INDUSTRIAL R718.</h1>
 </Paragrafo>
 <Espacador h={500}/>
 
 
-<TresDe {addToList}/>
+<TresDe {addToList} model="aranha.glb"/>
 <Paragrafo aos="fade-up">
     <h1>O que é R718?</h1>
     
@@ -200,8 +198,10 @@
 </Paragrafo>
 <Espacador h={500}/>
 
-
-<TresDe {addToList} aos="slide-left"/>
+<TresDe {addToList} aos="slide-left" model="pessoa.glb"/>
+<Paragrafo aos="flip-right">
+    <h1>EFEITOS NO CORPO HUMANO.</h1>
+</Paragrafo>
 <Paragrafo aos="slide-right">
     <h1>Ingeri R718 sem querer. Vou morrer?</h1>
     <h1>SIM.</h1>

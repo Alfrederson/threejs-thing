@@ -1,3 +1,11 @@
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader"
+
+
+const loader = new GLTFLoader()
+export function loadGLTF(filename){
+    return loader.loadAsync(filename)
+}
+
 const pastelTonesHex = [
     '#FF0000',
     '#00FFFF',

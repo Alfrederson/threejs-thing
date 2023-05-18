@@ -23,7 +23,7 @@
 </style>
 
 <div class="container">
-    <div class="papel" data-aos={aos} style="background-color:black; color:{qualquerCor()}; filter: drop-shadow(-8px 8px 0px {qualquerCor()});">
+    <div class="papel" data-aos={aos} style="background-color:black; color:{qualquerCor()}; box-shadow: -16px -16px 0px {qualquerCor()};">
         <slot/>
     </div>
 </div>

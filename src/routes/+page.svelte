@@ -11,6 +11,7 @@
     import QuemSou from "../component/QuemSou.svelte";
     import TresDe from "../component/TresDe.svelte";
 
+
     let canvas,
         renderer
 
@@ -144,7 +145,7 @@
 <Espacador h={500}/>
 
 
-<TresDe {addToList} model="aranha.glb"/>
+<TresDe {addToList} model="glb/aranha.glb"/>
 <Paragrafo aos="fade-up">
     <h1>O que é R718?</h1>
     
@@ -198,7 +199,7 @@
 </Paragrafo>
 <Espacador h={500}/>
 
-<TresDe {addToList} aos="slide-left" model="pessoa.glb"/>
+<TresDe {addToList} aos="slide-left" model="glb/pessoa.glb"/>
 <Paragrafo aos="flip-right">
     <h1>EFEITOS NO CORPO HUMANO.</h1>
 </Paragrafo>

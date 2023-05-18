@@ -36,9 +36,6 @@
     }
 
     function render(){
-        if(!canvas)
-            return;
-
 
         // tresDe tem:
         // div: HTMLDivElement
@@ -90,7 +87,6 @@
     }
 
     // isso é um timer.
-    let doneResizing = false
     onMount(()=>{
         if(!browser){
             console.log("Rodando dentro do SSR")
@@ -116,7 +112,7 @@
             },100)
         })
 
-        requestAnimationFrame( render )
+        render()
     })
 
 </script>
@@ -125,7 +121,6 @@
         font-family: monospace;
         margin: 0px;
         font-size: large;
-
     }
 
     canvas {
@@ -148,7 +143,9 @@
 <Paragrafo>
     <h1>CAMPANHA PARA A PROIBIÇÃO DO USO DO REFRIGENTE INDUSTRIAL R718.</h1>
 </Paragrafo>
-<Espacador h={200}/>
+<Espacador h={500}/>
+
+
 <TresDe {addToList}/>
 <Paragrafo aos="fade-up">
     <h1>O que é R718?</h1>
@@ -157,6 +154,7 @@
     <p>Ela está por toda parte, infiltrando-se silenciosamente em nossas vidas e trazendo efeitos nocivos terríveis.</p>
     <p>R718 é um composto perigoso, comumente utilizado como refrigente em aplicações industriais</p>
 </Paragrafo>
+<Espacador h={500}/>
 
 <TresDe {addToList} aos="flip-up"/>
 <Paragrafo aos="flip-right">
@@ -168,14 +166,14 @@
         <li>Em motores automotivos, misturado com outras substâncias tóxicas como etilenoglicol</li>
     </ul>    
 </Paragrafo>
-<Espacador h={200}/>
+<Espacador h={500}/>
+
+
+<TresDe {addToList} aos="slide-left"/>
 <Paragrafo aos="flip-left">
     <h1>
         Mas não é só isso. O R718 também é utilizado em usinas nucleares.
     </h1>
-
-    <TresDe {addToList} aos="slide-left"/>
-
     <ul>
         <li>Ele é a única substância tóxica capaz de desacelerar os nêutrons gerados durante a fissão nuclear.</li>
         <li>Ele é utilizado para transferir o calor radioativo produzido para os circuitos de resfriamento.</li>
@@ -183,7 +181,10 @@
         <li>O Vaso (ou <i>vessel</i>) do reator nuclear é preenchido com uma mistura de água e R718.</li>    
     </ul>
 </Paragrafo>
-<Espacador h={200}/>
+<Espacador h={500}/>
+
+
+<TresDe {addToList} aos="slide-right"/>
 <Paragrafo aos="flip-down">
     <h1>Ele é um poluente presente na chuva ácida e amplamente produzido durante o funcionamento dos motores de foguetes.</h1>
     <h2>
@@ -191,24 +192,49 @@
             Seus gases componentes são altamente explosivos e capazes de corroer metais, produzindo substâncias altamente tóxicas.
         </b>
     </h2>
-    <TresDe {addToList} aos="slide-right"/>
     <h3>
         <i>
             A combustão dos elementos químicos que compõem o R718 produz temperaturas tão elevadas que são capazes de destruir até mesmo diamantes.
         </i>
     </h3>
 </Paragrafo>
-<Espacador h={200}/>
+<Espacador h={500}/>
+
+
+<TresDe {addToList} aos="slide-left"/>
+<Paragrafo aos="slide-right">
+    <h1>Ingeri R718 sem querer. Vou morrer?</h1>
+    <h1>SIM.</h1>
+    <p>
+        Todas as pessoas expostas a R718 acabam morrendo com alto grau de contaminação em seus corpos.
+    </p>
+</Paragrafo>
+<Espacador h={500}/>
+
+
+<TresDe {addToList} aos="slide-right"/>
 <Paragrafo aos="zoom-in">
     <h1>Não é só isso: sua ausência também está ligada à desertificação.</h1>
-    <TresDe {addToList} aos="slide-down"/>
+    <p>
+        Uma vez que um ambiente é exposto ao R718, ele tende a se tornar um deserto quando acontece a evaporação completa.
+    </p>
+    <p>
+        Isso provoca a proliferação de animais do deserto, como aranhas.
+    </p>
 </Paragrafo>
-<Espacador h={200}/>
+<Espacador h={500}/>
+
+
+
+<TresDe {addToList} aos="slide-right"/>
 <Paragrafo aos="zoom-in">
+    <h1>EFEITOS CLIMÁTICOS</h1>
     <p>Quando presente na atmosfera, ele é um gás do efeito estufa mais poderoso do que o gás carbônico.</p>
-    <TresDe {addToList} aos="slide-up"/>
+
 </Paragrafo>
-<Espacador h={300}/>
+<Espacador h={500}/>
+
+
 <Paragrafo aos="flip-left">
     <QuemSou/>
 </Paragrafo>

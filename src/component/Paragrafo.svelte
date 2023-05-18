@@ -2,7 +2,6 @@
     import { qualquerCor } from "./util"
 
     export let aos=""
-    export let cor=qualquerCor()
 
 </script>
 <style>
@@ -17,12 +16,14 @@
         margin-left: auto;
         margin-right: auto;
         padding: 2em;
-        filter: drop-shadow(-8px 8px 0px #000);
+        
+        color: lime;
+        outline:2px solid lime;
     }    
 </style>
 
 <div class="container">
-    <div class="papel" data-aos={aos} style="background-color:{cor}">
+    <div class="papel" data-aos={aos} style="background-color:black; color:{qualquerCor()}; filter: drop-shadow(-8px 8px 0px {qualquerCor()});">
         <slot/>
     </div>
 </div>

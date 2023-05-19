@@ -1,38 +1,43 @@
-# create-svelte
+# Template de Landing Pager
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Essa é a coisa mais horrível que existe.
 
-## Creating a project
+Para testar localmente, você precisa definir essa variável em um .env:
 
-If you're seeing this, you've probably already done this step. Congrats!
+To test locally, you need to set this variable in a .env file:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
 
-# create a new project in my-app
-npm create svelte@latest my-app
+
+```
+VITE_MODO_TESTE=true
 ```
 
-## Developing
+Pra deployar em qualquer lugar, você precisa definir essas variáveis:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To deploy anywhere, you need to set these variables:
 
-```bash
-npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+
+```
+VITE_ENDPOINT_PIPEDREAM=(url do endpoint que vai receber a requisição)
+VITE_GOOGLE_TAG_ID=(url da sua gtag)
 ```
 
-## Building
 
-To create a production version of your app:
+# To test
 
-```bash
+```
+npm run dev -- --host
+```
+
+# To build
+
+```
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+# WHY DOES THIS NOT WORK WITH ADAPTER-VERCEL?
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+# I DON'T KNOW
+
+If you set the adapter to adapter-vercel in the svelte-config.js, then the whole thing will just 500, even if it works locally. I suspect this has something to do with the static .glb files. No idea how to solve.

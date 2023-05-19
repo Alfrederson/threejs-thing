@@ -82,7 +82,7 @@
             <p>E-mail:</p>
             <input type="text" bind:value={form.email} style="box-shadow: -4px -4px 0px {qualquerCor()};"/>
             <p>
-            <textarea bind:value={form.message} style="box-shadow: -4px -4px 0px {qualquerCor()};"/>
+            <textarea bind:value={form.message} style="box-shadow: -4px -4px 0px {qualquerCor()}; resize: none;"/>
             {#if form.nome !== ""}
                 Eu, {form.nome}, ao clicar no botão abaixo, concordo em assinar a PETIÇÃO PARA O BANIMENTO GLOBAL DO USO DO R718.
             {/if}

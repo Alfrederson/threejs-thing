@@ -1,19 +1,26 @@
 <script>
+    import { onMount } from "svelte";
+
     const modo_teste = import.meta.env.VITE_MODO_TESTE
+    const id_gtag    = import.meta.env.VITE_GOOGLE_TAG_ID
+
+    if(!modo_teste){
+        onMount(()=>{
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', id_gtag);
+        })
+    }else{
+        console.log("MODO TESTE. Usando gtag ", id_gtag)
+    }
 </script>
 
 <svelte:head>
     {#if modo_teste === undefined}
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DPHEL7LVF"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-9DPHEL7LVF');
-        </script>
-    {:else}
-        <meta name="modo_teste"/>
+        <script async src="https://www.googletagmanager.com/gtag/js?id={id_gtag}"></script>
     {/if}
 </svelte:head>
 

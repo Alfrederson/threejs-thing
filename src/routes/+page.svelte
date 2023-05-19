@@ -10,6 +10,7 @@
     import Paragrafo from "../component/Paragrafo.svelte";
     import QuemSou from "../component/QuemSou.svelte";
     import TresDe from "../component/TresDe.svelte";
+    import Formulario from '../component/Formulario.svelte';
 
 
     let canvas,
@@ -243,6 +244,10 @@
 </Paragrafo>
 <Espacador h={500}/>
 
+<Paragrafo aos="flip-right">
+    <Formulario/>    
+</Paragrafo>
+<Espacador h={200}/>
 
 <Paragrafo aos="flip-left">
     <h1>Quem sou eu</h1>

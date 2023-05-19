@@ -131,7 +131,9 @@
     }
 </style>
 
-
+<svelte:head>
+    <title>BAN R718</title>
+</svelte:head>
 <canvas id="view" />
 
 <h1 style="position: fixed; left:8px;top:8px;">
@@ -157,12 +159,15 @@
 
 <TresDe {addToList} aos="flip-up"/>
 <Paragrafo aos="flip-right">
-    <h2>Onde o R718 é utilizado?</h2>
+    <h2>ONDE O R718 É UTILIZADO?</h2>
     
     <p>O R718 é utilizado em uma série de contextos. Eis alguns exemplos mais conhecidos:</p>
     <ul>
         <li>Em usinas termo-elétricas a carvão, diesel e gás natural.</li>
         <li>Em motores automotivos, misturado com outras substâncias tóxicas como etilenoglicol</li>
+        <li>No corte e usinagem de metais.</li>
+        <li>É uma substância tóxica utilizada pelo agronegócio de forma irregular em larga escala com consequências gravíssimas para o meio ambiente.</li>
+        <li>É utilizado no funcionamento de navios de containers.</li>
     </ul>    
 </Paragrafo>
 <Espacador h={500}/>
@@ -202,13 +207,20 @@
 <TresDe {addToList} aos="slide-left" model="glb/pessoa.glb"/>
 <Paragrafo aos="flip-right">
     <h1>EFEITOS NO CORPO HUMANO.</h1>
+    <p>O consumo de R718 pode desencadear uma série de efeitos colaterais gravíssimos:</p>
+    <ul>
+        <li>Perda de sais minerais fatal se ingerido em grandes quantidades.</li>
+        <li>Queimaduras graves em contato com sua forma sólida.</li>
+        <li>A inalação deste composto é frequentemente letal.</li>
+        <li>Estima-se que uma porcentagem imensa das mortes em alto-mar esteja de alguma forma relacionada com a contaminação do ambiente por R718.</li>
+    </ul>
 </Paragrafo>
+<Espacador h={200}/>
 <Paragrafo aos="slide-right">
     <h1>Ingeri R718 sem querer. Vou morrer?</h1>
     <h1>SIM.</h1>
-    <p>
-        Todas as pessoas expostas a R718 acabam morrendo com alto grau de contaminação em seus corpos.
-    </p>
+    <p>Todas as pessoas expostas a R718 acabam morrendo, e infelizmente não há cura.</p>
+    <p>Todas as tentativas de remover totalmente o R718 do corpo se mostraram letais.</p>
 </Paragrafo>
 <Espacador h={500}/>
 
@@ -216,12 +228,8 @@
 <TresDe {addToList} aos="slide-right"/>
 <Paragrafo aos="zoom-in">
     <h1>Não é só isso: sua ausência também está ligada à desertificação.</h1>
-    <p>
-        Uma vez que um ambiente é exposto ao R718, ele tende a se tornar um deserto quando acontece a evaporação completa.
-    </p>
-    <p>
-        Isso provoca a proliferação de animais do deserto, como aranhas.
-    </p>
+    <p>Uma vez que um ambiente é exposto ao R718, ele tende a se tornar um deserto quando acontece a evaporação completa.</p>
+    <p>Isso provoca a proliferação de animais do deserto, como aranhas.</p>
 </Paragrafo>
 <Espacador h={500}/>
 
@@ -231,11 +239,12 @@
 <Paragrafo aos="zoom-in">
     <h1>EFEITOS CLIMÁTICOS</h1>
     <p>Quando presente na atmosfera, ele é um gás do efeito estufa mais poderoso do que o gás carbônico.</p>
-
+    <p>Altos níveis de R718 também estão associados a alagamentos e deslizamentos de terra.</p>
 </Paragrafo>
 <Espacador h={500}/>
 
 
 <Paragrafo aos="flip-left">
+    <h1>Quem sou eu</h1>
     <QuemSou/>
 </Paragrafo>

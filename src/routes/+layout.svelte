@@ -12,6 +12,7 @@
             }
             gtag('js', new Date());
             gtag('config', id_gtag);
+            console.log("gtag inicializado.")
         })
     }else{
         console.log("MODO TESTE. Usando gtag ", id_gtag)

@@ -41,6 +41,9 @@
 </script>
 
 <style>
+    fieldset{
+        border: none;
+    }
     input, textarea{
         color:yellow;
         width: 100%;

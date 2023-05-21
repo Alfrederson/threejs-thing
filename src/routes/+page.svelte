@@ -42,7 +42,6 @@
         // scene: THREE.Scene
         // camera: PerspectiveCamera
         // animate: function
-
         renderer.setScissorTest(false)
         renderer.setClearColor(0x000000,0)
         renderer.clear()

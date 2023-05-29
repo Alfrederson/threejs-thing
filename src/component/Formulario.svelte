@@ -81,14 +81,14 @@
     {:else}
         <fieldset disabled={busy}>
             <p>Nome:</p>
-            <input type="text" bind:value={form.nome} style="box-shadow: -4px -4px 0px {qualquerCor()};"/>
+            <input type="text" bind:value={form.name} style="box-shadow: -4px -4px 0px {qualquerCor()};"/>
             <p>E-mail:</p>
             <input type="text" bind:value={form.email} style="box-shadow: -4px -4px 0px {qualquerCor()};"/>
             <p>Deixe aqui sua mensagem:</p>
             <textarea bind:value={form.message} style="box-shadow: -4px -4px 0px {qualquerCor()}; resize: none;"/>
             <p>
-            {#if form.nome !== ""}
-                Eu, {form.nome}, ao clicar no botão abaixo, concordo em assinar a PETIÇÃO PARA O BANIMENTO GLOBAL DO USO DO R718.
+            {#if form.name !== ""}
+                Eu, {form.name}, ao clicar no botão abaixo, concordo em assinar a PETIÇÃO PARA O BANIMENTO GLOBAL DO USO DO R718.
             {/if}
             </p>
             <input type="submit" style="box-shadow: -4px -4px 0px {qualquerCor()};"/>

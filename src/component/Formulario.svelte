@@ -7,7 +7,7 @@
     let busy = false
     let sucesso = false
     const form = {
-        nome    : "",
+        name    : "",
         email   : "",
         message : ""
     }
@@ -18,12 +18,12 @@
             return;
         busy = true
         let myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
-        let urlencoded = new URLSearchParams(form);
+        myHeaders.append("Content-Type", "application/json");
+
         fetch(URL, {
             method: 'POST',
             headers: myHeaders,
-            body: urlencoded,
+            body: JSON.stringify(form),
             redirect: 'follow'
         })
         .then(response => response.text())

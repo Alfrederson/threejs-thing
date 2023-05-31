@@ -30,6 +30,7 @@
         .then(result => {
             sucesso = true
             console.log(result)
+            localStorage.setItem("respondeu",true)
         })
         .catch(error =>{
             console.log("Deu algum erro aí!")

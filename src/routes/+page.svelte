@@ -11,7 +11,7 @@
     import QuemSou from "../component/QuemSou.svelte";
     import TresDe from "../component/TresDe.svelte";
     import Formulario from '../component/Formulario.svelte';
-
+    import Respostas from "../component/Respostas.svelte";
 
     let canvas,
         renderer
@@ -85,6 +85,9 @@
         //setTimeout(render, 65)
     }
 
+    let
+        respondeuFormulario = true
+
     // isso é um timer.
     onMount(()=>{
         if(!browser){
@@ -95,6 +98,7 @@
 
         canvas = document.getElementById("view")
 
+        respondeuFormulario = localStorage.getItem("respondeu")
         // largura e altura do canvas
         canvas.width = window.innerWidth
         canvas.height = window.innerHeight
@@ -243,9 +247,14 @@
 </Paragrafo>
 <Espacador h={500}/>
 
+{#if !respondeuFormulario}
 <Paragrafo aos="flip-right">
     <Formulario/>    
 </Paragrafo>
+{/if}
+
+<Respostas/>
+
 <Espacador h={200}/>
 
 <Paragrafo aos="flip-left">

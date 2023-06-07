@@ -2,6 +2,18 @@
 
 Essa é a coisa mais horrível que existe.
 
+
+Veja ao vivo e a cores:
+
+https://ban.r718.org/
+
+ou
+
+https://threejs-thing.vercel.app/ 
+
+, caso a empresa resolva apagar o meu subdomínio.
+
+
 Para testar localmente, você precisa definir essa variável em um .env:
 
 To test locally, you need to set this variable in a .env file:
